@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat&display=swap');
+
+:root{
+    --color-primario: #153448;
+    --color-secundario: #3C5B6F;
+    --color-terciario: #948979;
+    --color-hover: #DFD0B8;
+
+    --fuente-montserrat: 'Montserrat', sans serif;
+    --fuente-krona: 'Krona One', sans serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    /* height: 100vh; */
+    box-sizing: border-box;
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    /* background-color: black; */
+    /* color: white; */
+}
+
+.header{
+    padding: 2% 0% 0% 4%;   /* Figma */
+}
+
+.header__menu{
+    display: flex;
+    gap: 80px;  /* Figma */
+}
+
+.header__menu__link{
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;  /*  1rem = 16px -> 1.5rem = 24px  */
+    font-weight: 600;
+    color: var(--color-terciario);
+    text-decoration: none;
+
+}
+
+.presentacion{
+    display: flex;
+    align-items: center;
+    padding: 6% 4%;
+    justify-content: space-between;
+    gap: 82px; /* Figma */
+}
+
+.presentacion__contenido{
+    width: 50%;   /* valor sacado del proyeto en Figma */
+    display: flex;
+    flex-direction: column;
+    gap: 40px;  /* valor sacado del proyecto en Figma */
+}
+
+.presentacion__contenido__titulo{
+    font-family: var(--fuente-krona);  /* usando Google Fonts */
+    font-size: 2.25rem;    /* valor sacado del proyeto en Figma - 36px = 2.25rem*/
+}
+
+.titulo-destaque{
+    color: var(--color-terciario);
+
+}
+
+.presentacion__contenido__texto{
+    font-family: var(--fuente-montserrat); /* usando Google Fonts */
+    font-size: 1.5rem;    /* valor sacado del proyeto en Figma */
+}
+
+.presentacion__enlaces{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;  /* valor sacado del proyecto en Figma */
+}
+
+.presentacion__enlaces__link{
+    width: 50%;   /* valor sacado del proyecto en Figma */
+    /* background-color: #22D4FD; */
+    text-align: center;
+    padding: 21.5px 0;  /* valor sacado del proyecto en Figma */
+    border-radius: 8px; /* valor sacado del proyecto en Figma */
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;    /* valor sacado del proyecto en Figma */
+    font-weight: 600;   /* valor sacado del proyecto en Figma */
+    text-decoration: none;
+    color: var(--color-secundario);
+    border: 2px solid var(--color-terciario);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.presentacion__enlaces__subtitulo{
+    font-family: 'Krona One', sans-serif;
+    font-size: 1.5rem;    /* valor sacado del proyecto en Figma */
+    font-weight: 400;   /* valor sacado del proyecto en Figma */
+}
+
+.presentacion__enlaces__link:hover{
+    background-color: var(--color-hover);
+}
+
+.presentacion__imagen{
+    width: 50%; /* Permite que la imagen varie su tamaño de acuerdo a la ventana */
+}
+
+.footer{
+    background-color: var(--color-terciario);
+    padding: 24px; /* valor sacado de Figma */
+    color:var(--color-primario);
+    text-align: center;
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media (max-width: 820px){
+
+    .header{
+        padding: 10%;
+    }
+
+    .header__menu{
+        justify-content: center;
+    }
+
+    .presentacion{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .presentacion__contenido{
+        width: auto;
+    }
+
+}
